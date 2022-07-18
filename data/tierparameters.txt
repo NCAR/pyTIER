@@ -1,0 +1,25 @@
+!parameterName        Value            Comments
+nMaxNear,               15    ,       maximum number of nearby stations to consider
+nMinNear,               3     ,       minimum number of nearby stations needed for slope regression
+maxDist,                250   ,       maximum distance to consider stations
+minSlope,              0.25    ,       minimum valid slope value (normalized for precipitation; physical units for temperature)
+maxInitialSlope,        4.25  ,       maximum valid initial pass normalized slope for precipitation
+maxFinalSlope,          3.0   ,       maximum valid final adjusted normalized slope for precipitation
+maxSlopeLower,          20    ,       maximum valid slope for temperature in lower atmospheric layer (inversion layer; allows for strong inversions)
+maxSlopeUpper,          0     ,       maximum valid slope for temperature in upper layer (free atmosphere; up to isothermal allowed)
+defaultSlope,           1.3   ,       default slope value (normalized for precipitation; physical units for temperature)
+topoPosMinDiff,         500   ,       minimum elevation difference used to adjust topographic position weights
+topoPosMaxDiff,         5000  ,       maximum elevation difference for stations to receive topographic position weighting
+topoPosExp,             1.0   ,       exponent to adjust topographic position weighting function
+coastalExp,             0.75  ,       exponent to adjust distance to coast weighting function
+layerExp,               0.5   ,       exponent to adjust atmospheric layer weighting function
+distanceWeightScale,    16000 ,       scale parameter in Barnes (1964) distance weighting function
+distanceWeightExp,      2     ,       exponent in Barnes (1964) distance weighting function
+maxGrad,                2.5   ,       maximum allowable normalized precipitation slope gradient between grid cells
+bufferSlope,            0.02  ,       a buffer parameter when computing precipitaiton slope feathering
+minElev,                100   ,       minimum elevation considered when feathering precipitation
+minElevDiff,            500   ,       minimum elevation difference across precipitation considered for feathering precipitation
+recomputeDefaultPrecipSlope,true,     logical string to indicate re-estimation of the default slope using domain specific information
+filterSize,             15    ,       size of low pass filter (grid points) used in computing updated slopes and uncertainty estimates
+filterSpread,           11    ,       spread of low-pass filter power used in computing updated slopes and uncertainty estimates
+covWindow,              10    ,       window for local covariance calculation for the SYMAP and slope uncertainty components.  Used in the final uncertainty estimation routine

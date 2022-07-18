@@ -1,0 +1,9 @@
+!parameterName        Value            Comments (No commas ',' allowed in the comments)
+demFilterName,        Daly,           filter type (Daly = original Daly et al. 1994 filter) - only option currently implemented
+demFilterPasses,      8,             number of passes to filter raw DEM
+minGradient,          0.003,          minimum gradient for a pixel to be considered sloped - otherwise it is considered flat
+smallFacet,           500,            area of smallest sloped facet allowed (km^2)
+smallFlat,            1000,           area of smallest flat facet allowed (km^2)
+narrowFlatRatio,      3.1,            ratio of major/minor axes to merge flat regions (i.e. ridges)
+layerSearchLength,    10,             search length (grid cells) to determine local minima in elevation
+inversionHeight,      250,            depth of layer 1 (inversion layer) in m
