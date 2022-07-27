@@ -1,0 +1,8 @@
+!inputName      Value           Comments
+gridName,               C:\Users\askarzam\Downloads\TIER-master\data\grid\exampleTIERGrid_N10.nc                    ,   domain file name
+variableEstimated,      precip                                                                                    ,   name of meteorological variable estimated
+stationFileList,        C:\Users\askarzam\Downloads\TIER-master\data\inputStations\precip\stationListPrecip.txt   ,   name of variable specific (e.g. precip or temp)  file with list of input station files
+stationDataPath,        C:\Users\askarzam\Downloads\TIER-master\data\inputStations\precip\                        ,   path to station data
+outputName,             C:\Users\askarzam\Downloads\TIER-master\data\output\caliOutput_prcp_13sta_test.nc         ,   name of output file
+parameterFile,          C:\Users\askarzam\Downloads\TIER-master\data\tierparameters.txt                           ,   name of TIER parameter file
+defaultTempLapse,       C:\Users\askarzam\Downloads\TIER-master\data\tempLapseRates\NARRTempLapseRates.nc         ,   name of default temperature lapse rate file. if not used set as empty string

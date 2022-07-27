@@ -1,0 +1,8 @@
+!inputName      Value           Comments
+gridName,       /path/to/grid/exampleTIERGrid.nc     ,      domain file name
+variableEstimated,   tmin,   name of meteorological variable estimated
+stationFileList, /path/to/inputStations/temp/stationListTemp.txt    ,       name of variable specific (e.g. precip or tmax/tmin)  file with list of input station files
+stationDataPath, /path/to/inputStations/temp/  ,  path to station data
+outputName,    /path/to/output/caliOutput_tmin_distexp1p75.nc      ,       name of output file
+parameterFile,     /path/to/parameterFile/tier_parameters_temp.txt  ,       name of TIER parameter file
+defaultTempLapse, /path/to/tempLapseRateFile/NARRTempLapseRates.nc, name of default temperature lapse rate file. if not used set as empty string

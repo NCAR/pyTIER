@@ -1,0 +1,8 @@
+!inputName      Value           Comments
+rawGridName,                C:\Users\askarzam\Downloads\TIER-master\data\grid\exampleGridRaw.nc                      ,  raw domain DEM
+outputGridName,             C:\Users\askarzam\Downloads\TIER-master\data\grid\exampleTIERGrid_1.nc                   ,  name of output processed grid
+stationPrecipPath,          C:\Users\askarzam\Downloads\TIER-master\data\inputStations\precip                        ,  path to precipitation station data
+stationPrecipListName,      C:\Users\askarzam\Downloads\TIER-master\data\inputStations\precip\stationListPrecip.txt  ,  name of precipitation station list file preprocessing script will create
+stationTempPath,            C:\Users\askarzam\Downloads\TIER-master\data\inputStations\temp                          ,  path to temperature station data
+stationTempListName,        C:\Users\askarzam\Downloads\TIER-master\data\inputStations\temp\stationListTemp.txt      ,  name of temperature station list file preprocessing script will create
+preprocessParameterFile,    C:\Users\askarzam\Downloads\TIER-master\data\tierpreprocessParameters.txt                ,  name of TIER preprocessing parameter file

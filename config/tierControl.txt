@@ -1,0 +1,8 @@
+!inputName      Value           Comments (No commas ',' allowed in the comments)
+gridName,          /path/to/grid/file                           , domain file name
+stationFileList,   /path/to/station/list/file                   , name of variable specific (e.g. precip or tmax/tmin)  file with list of input station files
+stationDataPath,   /path/to/station/data/directory              , path to station data
+outputName,        /path/to/output/file                         , name of output file
+parameterFile,     /path/to/TIER/parameter/file                 , name of TIER parameter file
+variableEstimated, precip                                       , name of meteorological variable estimated
+defaultTempLapse,  /path/to/default/temperature/lapse/rate/file , name of default temperature lapse rate file. if not used set as empty string

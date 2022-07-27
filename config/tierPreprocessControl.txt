@@ -1,0 +1,8 @@
+!inputName,      Value,           Comments (No commas ',' allowed in the comments)
+rawGridName,             /path/to/input/raw/grid/file                  , raw domain DEM
+outputGridName,          /path/to/output/processed/grid/file           , name of output processed grid
+stationPrecipPath,       /path/to/precipitation/station/data/directory , path to precipitation station data
+stationPrecipListName,   /path/to/precipitation/metadata/output/file   , name of precipitation station list file preprocessing script will create
+stationTempPath,         /path/to/temperature/station/data/directory   , path to temperature station data
+stationTempListName,     /path/to/temperature/metadata/output/file     , name of temperature station list file preprocessing script will create
+preprocessParameterFile, /path/to/tier/preprocessing/parameter/file    , name of TIER preprocessing parameter file
