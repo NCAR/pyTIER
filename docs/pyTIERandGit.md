@@ -1,4 +1,4 @@
-# TIER and Git
+# pyTIER and Git
 
 > Note: This document has been conveniently adapted from the [Cookbook for working with Git and VIC](https://github.com/UW-Hydro/VIC/wiki/Cookbook-for-Working-with-Git-and-VIC) and [SUMMA and Git](https://github.com/NCAR/summa/blob/master/docs/development/SUMMA_and_git.md)
 
@@ -6,34 +6,34 @@
 
 Git is a version control tool that we use to...
 
- * track changes over time in the TIER source code,
+ * track changes over time in the pyTIER source code,
  * facilitate parallel development between multiple model developers and research projects,
  * encourage peer code review and bug tracking, and
  * to distribute official and bleeding edge releases of the model source code.
 
-## TIER for model users (non developers)
-In general, if you plan to apply the model rather than work directly on the source code, you may just download the model from the [TIER GitHub page](https://github.com/NCAR/TIER). Additional archived tags and releases (including all previous TIER versions) are available [here](https://github.com/NCAR/TIER/tags). You can simply download the code and start working. If you want to work with the code and contribute to TIER development, read on.
+## pyTIER for model users (non developers)
+In general, if you plan to apply the model rather than work directly on the source code, you may just download the model from the [pyTIER GitHub page](https://github.com/NCAR/pyTIER). Additional archived tags and releases (including all previous pyTIER versions) are available [here](https://github.com/NCAR/pyTIER/tags). You can simply download the code and start working. If you want to work with the code and contribute to pyTIER development, read on.
 
-## TIER for developers
-If you plan on contributing to model development or would like a systematic way to incorporate updates to the TIER source code, we encourage you to use Git. The following sections are designed to get you started using Git and working with the TIER source code repository.
+## pyTIER for developers
+If you plan on contributing to model development or would like a systematic way to incorporate updates to the pyTIER source code, we encourage you to use Git. The following sections are designed to get you started using Git and working with the pyTIER source code repository.
 
 ### Git resources
-If you are not familiar with Git yet, we encourage you to spend a few minutes getting acquainted with the system before you starting working with the TIER source code and Git. It's not difficult to use and a few minutes of learning about Git will go along way in helping you manage your code development.
+If you are not familiar with Git yet, we encourage you to spend a few minutes getting acquainted with the system before you starting working with the pyTIER source code and Git. It's not difficult to use and a few minutes of learning about Git will go along way in helping you manage your code development.
 
 There are a number of good Git learning resources that will provide a basic introduction to the version control system.
 * http://git-scm.com/about
 * https://help.github.com/
 
 ### Getting the code
-The basics steps to get the TIER source code repository are as follows. This is basically a TIER specific rendition of https://help.github.com/articles/fork-a-repo
+The basics steps to get the pyTIER source code repository are as follows. This is basically a pyTIER specific rendition of https://help.github.com/articles/fork-a-repo
 
 #### Step 0: A few definitions
 
 Using Git involves a few different copies of the archive (there is more than one way to use Git -- this is how we propose you use it):
 
-1. **Truth repo:** this is the master copy of the archive, maintained on the GitHub server at https://github.com/NCAR/TIER. You will not be able to edit this or push code to it directly. We don't either, we work on our own copy of this repo and only integrate the changes into the truth repo when they have been tested and reviewed.
+1. **Truth repo:** this is the master copy of the archive, maintained on the GitHub server at https://github.com/NCAR/pyTIER. You will not be able to edit this or push code to it directly. We don't either, we work on our own copy of this repo and only integrate the changes into the truth repo when they have been tested and reviewed.
 
-2. **Your fork of the truth repo:** this is your version of the archive, maintained on the GitHub server by you. This is generally **not** where you edit code; it is more of a transfer point between your clone (see below) and the truth repo. Git keeps track of the differences between your fork and the truth repo. To move code changes from your fork to the truth repo, you must make a "pull request" to the TIER truth repo. If it's decided that your code has been sufficiently tested and reviewed and that it is a useful addition to TIER, then the administrators of the truth repo will do the actual pull (don't worry if some of the terminology does not yet make sense at this point).
+2. **Your fork of the truth repo:** this is your version of the archive, maintained on the GitHub server by you. This is generally **not** where you edit code; it is more of a transfer point between your clone (see below) and the truth repo. Git keeps track of the differences between your fork and the truth repo. To move code changes from your fork to the truth repo, you must make a "pull request" to the pyTIER truth repo. If it's decided that your code has been sufficiently tested and reviewed and that it is a useful addition to pyTIER, then the administrators of the truth repo will do the actual pull (don't worry if some of the terminology does not yet make sense at this point).
 
 3. **Your clone(s) of your fork of the truth repo:** a clone is a copy of your fork, stored on your local machine, where you can edit and test the code. You can have one or more clones. Each clone is a snapshot of a particular version of the code in your fork (e.g., you select which branches, and which versions of the code on those branches, to copy to your clone). You can change which version of the code each of your clones points to at any time. Your clone is where you edit files and commit changes. You can then push code changes from your clone back up to your fork.
 
@@ -43,26 +43,26 @@ One more note: In most of the following we are assuming that you will do much of
 
 #### Step 1: Fork the repo
 
-If you do not have a github account, create one. It's free for public repos (like the TIER one). Once you have an account, go to the [NCAR/TIER](https://github.com/NCAR/TIER) page and click "Fork" in the upper right hand corner.
+If you do not have a github account, create one. It's free for public repos (like the pyTIER one). Once you have an account, go to the [NCAR/pyTIER](https://github.com/NCAR/pyTIER) page and click "Fork" in the upper right hand corner.
 
 #### Step 2: Clone your fork
 
-You've successfully forked the TIER repository, but so far it only exists on GitHub. From this point on, anything you do to this fork will not affect the Truth Repo, so you can even delete the fork or modify it without worrying that you will make affect the main TIER repo. To be able to work on the project, you will need to clone it to your local machine.
+You've successfully forked the pyTIER repository, but so far it only exists on GitHub. From this point on, anything you do to this fork will not affect the Truth Repo, so you can even delete the fork or modify it without worrying that you will make affect the main pyTIER repo. To be able to work on the project, you will need to clone it to your local machine.
 
 Run the following code on your local machine:
 
-    git clone https://github.com/<username>/TIER.git
+    git clone https://github.com/<username>/pyTIER.git
 
 where `<username>` is your GitHub username.
-This clones your fork of the repository into the current directory. The clone will live in a directory called "TIER".
+This clones your fork of the repository into the current directory. The clone will live in a directory called "pyTIER".
 
 #### Step 3: Configure remotes
 
 When a repository is cloned, it has a default remote called `origin` that points to **your** fork on GitHub, **not** the original repository it was forked from. To keep track of the original repository, you need to add another remote. You can name this anything you want, but the name `upstream` is descriptive and an informal convention.
 
-Change to the newly cloned "TIER" directory:
+Change to the newly cloned "pyTIER" directory:
 
-    cd TIER
+    cd pyTIER
 
 If you type
 
@@ -84,7 +84,7 @@ then you are not in a Git repository (note that the top level directory in a Git
 
 Assign the truth repo to a remote tracking branch called `upstream`, which will allow you easily pull in changes that are made in the truth repo and keep your clone in-sync with that version. Once you get more familiar with Git, you will be able to control which updates to include:
 
-    git remote add upstream https://github.com/NCAR/TIER.git
+    git remote add upstream https://github.com/NCAR/pyTIER.git
 
 #### Step 4. Sync your clone with the truth repo
 
@@ -98,7 +98,7 @@ If you have already made changes to the code, this command by itself will not ov
 
 ##### 4.b. Merge changes
 
-Determine which branches you will need to work with. At the very least, this will include the master branch. If you are working on a hotfix or a feature branch that already exists, you will need this branch as well; the TIER administrator has likely given you the name of the appropriate branch to use. Alternatively, you may want to create a new branch (e.g., if you are the first person to work on a new feature or bug fix). For more information about the branches in the TIER archive, see the [Git workflow for TIER](TIER_git_workflow.md).
+Determine which branches you will need to work with. At the very least, this will include the master branch. If you are working on a hotfix or a feature branch that already exists, you will need this branch as well; the pyTIER administrator has likely given you the name of the appropriate branch to use. Alternatively, you may want to create a new branch (e.g., if you are the first person to work on a new feature or bug fix). For more information about the branches in the pyTIER archive, see the [Git workflow for pyTIER](pyTIER_git_workflow.md).
 
 For each branch, merge any changes from the truth repo into your local version:
 
@@ -168,7 +168,7 @@ Now that you have added (or staged) teh changes you want to include, you have to
 
 This will bring up a commit log in your default editor. The list of files whose changes will be committed (i.e. were staged via `git add`) is shown in the header at the top of the file. If you disagree with this list, exit the editor and add and unstage files as necessary to correct the list. Then try "git commit" again. If satisfied with the list of changed files, add a description of the set of changes (including a brief description of the problem that motivated the changes). Save and exit.
 
-Note: writing good commit messages is essential for making sense of your code changes later. Or perhaps more importantly, for someone else to make sense of your code changes later. Generally, in Git it is recommended to describe the nature of the change in a brief one-liner, then leave a blank line, following by a more detailed description of the changes as necessary. The reason is that some of the tools that let you browse past changes (e.g. `git log`), use this one-liner to TIERrize code changes.
+Note: writing good commit messages is essential for making sense of your code changes later. Or perhaps more importantly, for someone else to make sense of your code changes later. Generally, in Git it is recommended to describe the nature of the change in a brief one-liner, then leave a blank line, following by a more detailed description of the changes as necessary. The reason is that some of the tools that let you browse past changes (e.g. `git log`), use this one-liner to pyTIERrize code changes.
 
 ##### Pushing commits to your fork
 
@@ -185,9 +185,9 @@ To make your changes visible to other users/developers, your changes must be inc
 
 **NOTE:** We ask that you perform at least some basic tests on your code before you issue a pull request. Make sure the code runs for at least the test cases you have been working with. If it is a bug fix, make sure that it actually fixes the bug. If possible, try to make sure that it doesn't create a new bug.
 
-The TIER administrator and other developers will review your pull request and decide if/how they want to incorporate your changes into the code. They are likely to suggest some changes (code style, content, etc.).
+The pyTIER administrator and other developers will review your pull request and decide if/how they want to incorporate your changes into the code. They are likely to suggest some changes (code style, content, etc.).
 
 ### Git workflow
 
-For us to leverage Git to its full potential, we have implemented a Git-oriented workflow. This requires developers to adhere to a few rules regarding branch names and merge requests. A full description of the workflow we use can be found in the document describing the [Git workflow for TIER](TIERGitWorkflow.md).
+For us to leverage Git to its full potential, we have implemented a Git-oriented workflow. This requires developers to adhere to a few rules regarding branch names and merge requests. A full description of the workflow we use can be found in the document describing the [Git workflow for pyTIER](pyTIERGitWorkflow.md).
 
