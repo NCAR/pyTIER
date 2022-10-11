@@ -22,7 +22,7 @@ Once the preprocessing is finished a brief comparison between your and the refer
 Once the preprocessing is finished, set the configuration variables in `tierControl.txt` to the appropriate paths and files.  See the [Config readme](configReadme.md) for details.
 
 The TIER model can now be run with tierDriver.m in Matlab or Octave.  All three variables can be interpolated: `precip, tmax, or tmin`.
-The `tierParameter.txt` file will be used to define the TIER model parameter values.  Again, if any parameters do not exist in this parameter file, default values are used (`tierModel/tierModel.ipynb in the initParameters function`).
+The `tierParameter.txt` file will be used to define the TIER model parameter values.  Again, if any parameters do not exist in this parameter file, default values are used (`tierModel/tierDriver.ipynb in the initPreprocessParameters function`).
 
 Again, various diagnostics will print while the model is running.  The output file will be generated at the user specified location and name.  It is suggested to make sure the output name is different from the provided reference output files.
 It is also suggested to note which variable is interpolated (e.g. have precip, tmax, tmin) in the output file name.
